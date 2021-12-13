@@ -1,0 +1,43 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Camus",
+	"patterns": [
+		{"include": "#comment"},
+		{"include": "#heading"},
+		{"include": "#quote"},
+		{"include": "#code"}
+	],
+	"repository": {
+		"heading": {
+			"patterns": [
+				{
+					"match": "^(={1,6})(.*)$",
+					"name": "markup.heading.camus"
+				}
+			]
+		},
+		"quote": {
+			"patterns": [
+				{
+					"begin": "^#\\{quote\\s*$",
+					"end": "^#\\}\\s*$",
+					"name": "markup.quote.camus"
+				},
+				{
+					"match": "^>(.*)",
+					"name": "markup.quote.camus"
+				}
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"begin": "^#\\{ignore\\s*$",
+					"end": "^#\\}\\s*$",
+					"name": "comment.camus"
+				}
+			]
+		}
+	},
+	"scopeName": "source.camus"
+}

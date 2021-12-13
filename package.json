@@ -1,0 +1,83 @@
+{
+    "name": "camus",
+    "displayName": "CamusMarkup",
+    "description": "VSCode support for Camus markup language",
+    "version": "0.0.1",
+    "publisher": "SebastianHiggins",
+    "activationEvents": [
+        "onStartupFinished",
+        "onLanguage:camus"
+    ],
+    "main": "./dist/main.js",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "menus": {
+            "editor/title": [
+                {
+                    "when": "editorLangId == camus",
+                    "command": "camus.preview",
+                    "group": "navigation"
+                }
+            ]
+        },
+        "commands": [
+            {
+                "command": "camus.preview",
+                "title": "Preview",
+                "category": "Camus",
+                "icon": {
+                    "light": "media/icon/preview-light.svg",
+                    "dark": "media/icon/preview-dark.svg"
+                }
+            }
+        ],
+        "languages": [
+            {
+                "id": "camus",
+                "aliases": [
+                    "Camus",
+                    "camus"
+                ],
+                "extensions": [
+                    ".cm",
+                    ".cm3"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "camus",
+                "scopeName": "source.camus",
+                "path": "./syntaxes/camus.tmLanguage.json",
+                "embeddedLanguages": {
+                    "meta.embedded.block.javascript": "javascript"
+                }
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "npm run esbuild",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "esbuild:main": "npx esbuild ./src/extension.ts --bundle --outfile=dist/main.js --external:vscode --format=cjs --platform=node",
+        "esbuild": "npm run esbuild:main",
+        "lint": "eslint src --ext ts",
+        "test": "node ./out/test/runTest.js"
+    },
+    "dependencies": {
+        "@bctnry/camus-core": "^0.1.0"
+    },
+    "devDependencies": {
+        "@types/node": "^16.11.12",
+        "@types/vscode": "^1.63.0",
+        "esbuild": "^0.14.3",
+        "typescript": "^4.5.3"
+    }
+}
