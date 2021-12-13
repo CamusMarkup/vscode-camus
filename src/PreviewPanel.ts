@@ -16,7 +16,7 @@ export class PreviewPanel {
 	 */
 	public static currentPanel: PreviewPanel | undefined;
 
-    public static readonly CamusHTMLRenderer = new camus.Renderer.CamusHTMLRenderer();
+    public static readonly CamusHTMLRenderer = new camus.Renderer.HTMLRenderer();
 
 	public static readonly viewType = 'camusPreview';
 

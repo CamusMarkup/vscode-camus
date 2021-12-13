@@ -2,15 +2,13 @@
     "name": "vscode-camus",
     "displayName": "CamusMarkup",
     "description": "VSCode support for Camus markup language",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "SebastianHiggins",
     "icon": "camus-icon.png",
-
     "bugs": {
         "url": "https://github.com/CamusMarkup/vscode-camus/issues"
     },
     "homepage": "https://github.com/CamusMarkup/vscode-camus#readme",
-
     "repository": {
         "type": "git",
         "url": "git+ssh://git@github.com/CamusMarkup/vscode-camus.git"
@@ -21,7 +19,7 @@
     ],
     "main": "./dist/main.js",
     "engines": {
-        "vscode": "^1.63.0"
+        "vscode": "^1.62.0"
     },
     "categories": [
         "Programming Languages"
@@ -83,13 +81,13 @@
         "lint": "eslint src --ext ts",
         "test": "node ./out/test/runTest.js"
     },
-    "dependencies": {
-        "@bctnry/camus-core": "^0.1.0"
-    },
     "devDependencies": {
         "@types/node": "^16.11.12",
-        "@types/vscode": "^1.63.0",
+        "@types/vscode": "^1.62.0",
         "esbuild": "^0.14.3",
         "typescript": "^4.5.3"
+    },
+    "dependencies": {
+        "@bctnry/camus-core": "^0.1.2"
     }
 }
