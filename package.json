@@ -5,6 +5,16 @@
     "version": "0.0.1",
     "publisher": "SebastianHiggins",
     "icon": "camus-icon.png",
+
+    "bugs": {
+        "url": "https://github.com/CamusMarkup/vscode-camus/issues"
+    },
+    "homepage": "https://github.com/CamusMarkup/vscode-camus#readme",
+
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/CamusMarkup/vscode-camus.git"
+    },
     "activationEvents": [
         "onStartupFinished",
         "onLanguage:camus"
