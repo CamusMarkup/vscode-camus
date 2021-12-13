@@ -1,9 +1,10 @@
 {
-    "name": "camus",
+    "name": "vscode-camus",
     "displayName": "CamusMarkup",
     "description": "VSCode support for Camus markup language",
     "version": "0.0.1",
     "publisher": "SebastianHiggins",
+    "icon": "camus-icon.png",
     "activationEvents": [
         "onStartupFinished",
         "onLanguage:camus"
@@ -15,6 +16,7 @@
     "categories": [
         "Programming Languages"
     ],
+    "license": "BSD-3-Clause",
     "contributes": {
         "menus": {
             "editor/title": [
