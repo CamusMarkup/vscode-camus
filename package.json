@@ -2,7 +2,7 @@
     "name": "vscode-camus",
     "displayName": "CamusMarkup",
     "description": "VSCode support for Camus markup language",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "SebastianHiggins",
     "icon": "camus-icon.png",
     "bugs": {
@@ -88,6 +88,6 @@
         "typescript": "^4.5.3"
     },
     "dependencies": {
-        "@bctnry/camus-core": "^0.1.2"
+        "@bctnry/camus-core": "^0.1.7"
     }
 }
